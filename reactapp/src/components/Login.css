@@ -1,0 +1,99 @@
+    
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .login-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* background-image: url("https://static.vecteezy.com/system/resources/thumbnails/000/600/523/small/BG57.jpg"); */
+        background-size: cover;
+       
+    }
+
+    .login-container h1 {
+        /* color: #f8f8f8;  */
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    .login-container a{
+        color: #059dda;
+        cursor: pointer;
+    }
+
+    .login-container .heading{
+        display: flex;
+        
+    }
+    .login-form{
+        border: 2px solid gray;
+        width: 400px;
+        padding: 20px;
+        max-width: 500px;
+        background: rgba(240, 237, 237, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; /* This will center the button horizontally */
+        /* justify-content: center; */ 
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #4a4949;
+        border-radius: 5px;
+        box-sizing: border-box;
+        /* background-color: #2d2c2c; */
+        color: black;
+        
+    }
+
+    /* .form-group select{
+        background-color: #2d2c2c;
+        color: white;
+    } */
+    
+
+    .login-button {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #0056b3;
+        border-radius: 20px;
+        cursor: pointer;
+        color: #0056b3;
+        font-size: 16px;
+    }
+    
+    .login-button:hover {
+        background-color: #0056b3;
+        color: white;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center; 
+        margin-top: 15px;
+    }
+
+    
