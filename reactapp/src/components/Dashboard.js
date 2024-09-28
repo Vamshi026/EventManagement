@@ -9,8 +9,8 @@ const Dashboard = () => {
 
     useEffect(() => {
         if (userModel) {
-            console.log("UserModel:", userModel); // Log userModel to verify its structure
-    
+            console.log("UserModel:", userModel); 
+            
             if (userModel.userrole === 'ROLE_ADMIN') {
                 navigate('/admin-dashboard');
             } else {

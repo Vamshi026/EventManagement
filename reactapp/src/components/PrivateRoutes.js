@@ -9,6 +9,8 @@ const PrivateRoute = ({ component: Component, allowedRoles, ...rest }) => {
 
     // Check if user is authenticated
     if (!isAuthenticated) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('userModel');
         return <Navigate to="/login" />;
     }
 

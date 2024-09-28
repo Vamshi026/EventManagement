@@ -315,7 +315,7 @@ const CustomerDashboard = () => {
                             </span></p>
                         <div className="buttons-group">
                             {booking.status === "Pending" && <button onClick={() => handleEditBooking(index)}>Edit</button>}
-                            <button onClick={() => handleDeleteBooking(index)}>Delete</button>
+                            <button className="close-button" onClick={() => handleDeleteBooking(index)}>Delete</button>
                         </div>
                     </li>
                 ))}

@@ -27,20 +27,7 @@ const Login = () => {
                 }
             }
         } catch (error) {
-            // Check if the error has a JSON body
-            // if (error.response && error.response.data && error.response.data.error) {
-            //     const errorMessage = error.response.data.error;
-    
-            //     if (errorMessage === "User role mismatch") {
-            //         setError("User role mismatch. Please ensure you are using the correct role.");
-            //     } else if (errorMessage === "Invalid credentials") {
-            //         setError("Invalid email or password. Please try again.");
-            //     } else {
-            //         setError("Login Failed: " + error.response.data.message);
-            //     }
-            // } else {
-            //     setError("Login Failed: " + error.message);
-            // }
+           
             setError(error.message);
         }
     };
@@ -70,9 +57,7 @@ const Login = () => {
                 {error && <p style={{ color: 'red' }}>{error}</p>}
                 <div className='button-container'>
                 <button type="submit" className="login-button">Login</button>
-            </div>
-
-                
+                </div>
             </form>
             
             

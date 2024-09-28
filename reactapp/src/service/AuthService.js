@@ -39,7 +39,7 @@ export const registerUser = async (user) => {
 // Log in a user and return the JWT token and user details
 export const loginUser = async (user) => {
     try {
-        console.log(user);
+        // console.log(user);
         const response = await fetch(`${BASE_URL}/login`, {
             method: 'POST',
             headers: {
@@ -51,18 +51,11 @@ export const loginUser = async (user) => {
         
         if (!response.ok) {
             const errorData = await response.json(); 
-            console.log(errorData);
+            // console.log(errorData);
             throw new Error(errorData.message || 'Login failed'); 
         }
 
         const data = await response.json();
-        // if (data.token) {
-        //     const tokenExpiry = Date.now() + data.expiresIn * 1000; 
-        //     localStorage.setItem('token', data.token);
-        //     localStorage.setItem('tokenExpiry', tokenExpiry); 
-        //     localStorage.setItem('userModel', JSON.stringify(data.user));
-        //     return data;
-        // }
         console.log(data); 
         return data; 
     } catch (error) {
