@@ -13,7 +13,7 @@ const UserProfile = () => {
     const [password, setPassword] = useState(''); 
     const [isEditing, setIsEditing] = useState(false);
 
-    // Fetch user data from userModel or localStorage
+    
     useEffect(() => {
         const getUser = () => {
             if (userModel) {
@@ -36,12 +36,12 @@ const UserProfile = () => {
         setPassword('');
     }, [userModel]);
 
-    // Enable editing of form fields
+    
     const handleEdit = () => {
         setIsEditing(true); 
     };
 
-    // Handle form submission and update user details
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -58,7 +58,7 @@ const UserProfile = () => {
             
             const token = localStorage.getItem('token');
             
-            // Send PUT request to update user details
+            
             const response = await fetch(`${BASE_URL}/user/${userid}`, {
                 method: 'PUT',
                 headers: {
@@ -73,7 +73,7 @@ const UserProfile = () => {
                 localStorage.removeItem('token');
                 
                 alert("Your session has expired. Please log in again.");
-                // Optionally, redirect to login page
+                
                 window.location.href = "/login";
                 return;
             }
@@ -89,7 +89,7 @@ const UserProfile = () => {
                 ...userModel,
                 firstname: responseData.firstname,
                 lastname: responseData.lastname,
-                // email: responseData.email
+                
             });
 
             setIsEditing(false); 
@@ -111,7 +111,7 @@ const UserProfile = () => {
                     <input 
                         type="text" 
                         value={userid} 
-                        disabled={true} // User ID should not be editable
+                        disabled={true} 
                     />
                 </div>
                 <div className='form-group'>
@@ -120,7 +120,7 @@ const UserProfile = () => {
                         type="text" 
                         value={firstname} 
                         onChange={(e) => setFirstname(e.target.value)} 
-                        disabled={!isEditing} // Enable field only in edit mode
+                        disabled={!isEditing} 
                     />
                 </div>
                 <div className='form-group'>

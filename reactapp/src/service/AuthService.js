@@ -1,7 +1,7 @@
 
 import { BASE_URL } from './Utils';
 
-// Register a new user
+
 export const registerUser = async (user) => {
     try {
         const response = await fetch(`${BASE_URL}/register`, {
@@ -36,10 +36,10 @@ export const registerUser = async (user) => {
     }
 };
 
-// Log in a user and return the JWT token and user details
+
 export const loginUser = async (user) => {
     try {
-        // console.log(user);
+        
         const response = await fetch(`${BASE_URL}/login`, {
             method: 'POST',
             headers: {
@@ -51,7 +51,7 @@ export const loginUser = async (user) => {
         
         if (!response.ok) {
             const errorData = await response.json(); 
-            // console.log(errorData);
+          
             throw new Error(errorData.message || 'Login failed'); 
         }
 

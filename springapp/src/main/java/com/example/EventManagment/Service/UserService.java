@@ -5,14 +5,14 @@ import com.example.EventManagment.Entity.Bookings;
 import com.example.EventManagment.Entity.User;
 
 
-import com.example.EventManagment.Exceptions.CustomExceptionHandler;
+
 import com.example.EventManagment.Exceptions.RoleMismatchException;
 import com.example.EventManagment.Exceptions.UserAlreadyExistsException;
 import com.example.EventManagment.Repository.BookingsRepository;
 import com.example.EventManagment.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,7 +20,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
+
 
 import java.util.List;
 import java.util.Optional;

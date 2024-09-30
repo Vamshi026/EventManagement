@@ -3,23 +3,23 @@ import { Navigate } from 'react-router-dom';
 
 const PrivateRoute = ({ component: Component, allowedRoles, ...rest }) => {
     const isAuthenticated = Boolean(localStorage.getItem('token'));
-    const user = JSON.parse(localStorage.getItem('userModel')); // Parse the stored string back to an object
+    const user = JSON.parse(localStorage.getItem('userModel')); 
 
-    console.log(user); // This should show the parsed object, including the userrole
+    console.log(user); 
 
-    // Check if user is authenticated
+    
     if (!isAuthenticated) {
         localStorage.removeItem('token');
         localStorage.removeItem('userModel');
         return <Navigate to="/login" />;
     }
 
-    // Check if user role is allowed for this route
+    
     if (allowedRoles && !allowedRoles.includes(user?.userrole)) {
-        return <Navigate to="/login" />; // Redirect to unauthorized page if role doesn't match
+        return <Navigate to="/login" />; 
     }
 
-    // Render the component if authenticated and authorized
+    
     return <Component {...rest} />;
 };
 

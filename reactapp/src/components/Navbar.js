@@ -1,7 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import Dashboard from './Dashboard';
-import { Router, Routes, Route, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import UserContext from '../context/UserContext';
 

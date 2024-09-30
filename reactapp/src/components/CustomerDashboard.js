@@ -34,7 +34,7 @@ const CustomerDashboard = () => {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}` // Add the Authorization header with the token
+                    'Authorization': `Bearer ${token}` 
                 }
             });
 
@@ -43,21 +43,21 @@ const CustomerDashboard = () => {
                 localStorage.removeItem('token');
                 
                 alert("Your session has expired. Please log in again.");
-                // Optionally, redirect to login page
+                
                 window.location.href = "/login";
                 return;
             }
             
-            // Check if the response is okay
+            
             if (!response.ok) {
                 throw new Error(`Error fetching bookings: ${response.statusText}`);
             }
             
-            // Parse the response as JSON
+          
             const data = await response.json();
-            console.log('Fetched bookings:', data); // Log the fetched bookings
+            console.log('Fetched bookings:', data); 
             
-            // Update state with the fetched bookings
+            
             setBookings(data);
         } catch (error) {
             console.error('Error fetching bookings:', error);
@@ -121,7 +121,7 @@ const CustomerDashboard = () => {
                     localStorage.removeItem('token');
                     
                     alert("Your session has expired. Please log in again.");
-                    // Optionally, redirect to login page
+                    
                     window.location.href = "/login";
                     return;
                 }
@@ -143,7 +143,7 @@ const CustomerDashboard = () => {
                     localStorage.removeItem('token');
                     
                     alert("Your session has expired. Please log in again.");
-                    // Optionally, redirect to login page
+                    
                     window.location.href = "/login";
                     return;
                 }
