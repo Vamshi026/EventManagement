@@ -1,3 +1,4 @@
+
 .dashboard {
     justify-content: center;
     align-items: center;
@@ -73,6 +74,15 @@
     transform: scale(1.05);
     cursor: pointer;
 }
+.admin-dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
 
 button {
     border-radius: 20px;
@@ -103,7 +113,7 @@ button:hover {
 }
 
 .book-now {
-    background: rgba(40, 39, 39, 0.2); 
+    background: rgba(87, 84, 84, 0.048); 
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 10px;
@@ -149,12 +159,12 @@ button:hover {
     font-size: 16px;
 }
 
-/* Show User Bookings */
+
 
 ul {
     list-style-type: none;
   }
-/* Booking List Container */
+
 .booking-list {
     max-height: 500px;
     width: 90%;
@@ -196,7 +206,7 @@ ul {
     margin: 5px 0;
 }
 
-/* Button Styling */
+
 .buttons-group {
     display: flex;
     justify-content: space-between;
@@ -219,6 +229,8 @@ ul {
     color: white;
     border: 1px solid transparent;
 }
+
+
 
 .close-button {
     border-radius: 5px;
@@ -244,7 +256,7 @@ ul {
 .bookings-list {
     max-height: 400px;
     overflow-y: auto;
-    background: rgba(240, 237, 237, 0.2);
+    background: rgba(50, 49, 49, 0.1);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 5px;
@@ -298,7 +310,7 @@ ul {
     border: 2px solid rgb(0, 0, 0);
 }
 
-/* Animations for status change */
+
 .fade-Approved {
     animation: fadeOutApprove 0.5s forwards;
 }
@@ -317,7 +329,7 @@ ul {
     to { background-color: transparent; color: red; }
 }
 
-/* Status text */
+
 .status-text.approved {
     color: green;
     font-weight: bold;

@@ -71,15 +71,17 @@ const AdminDashboard = () => {
                         booking.id === bookingId ? { ...booking, status } : booking
                     )
                 );
-                setStatusAnimation({}); // Reset animation
-            }, 500); // Animation duration
+                setStatusAnimation({}); 
+            }, 500); 
         } catch (error) {
             console.error('Error updating booking:', error);
         }
     };
     
     return (
-        <div className="dashboard">
+        
+        <div className="admin-dashboard">
+            <script src="https://kit.fontawesome.com/f1a8613562.js" crossorigin="anonymous"></script>
             <center><h1>Welcome Admin</h1></center>
             <div className='book-now'>
                 <h2>All Bookings</h2>
@@ -104,6 +106,7 @@ const AdminDashboard = () => {
                             <div className="action-btn">
                                 {booking.status === "Approved" ? (
                                     <p className="status-text approved">Approved</p>
+                                    
                                 ) : booking.status === "Denied" ? (
                                     <p className="status-text denied">Denied</p>
                                 ) : (

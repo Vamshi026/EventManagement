@@ -11,7 +11,7 @@ import Navbar from './components/Navbar';
 import UserProfile from './components/UserProfile';
 import PrivateRoute from './components/PrivateRoutes';
 import './httpInterceptors';
-
+import './App.css';
 
 const App = () => (
     <Router>
